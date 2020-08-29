@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link media="all" rel="stylesheet" href="style.css">
+    <link media="all" rel="stylesheet" href="demo.css">
+  </head>
+  <body class="body">
+  <main>
+    <article class="article">
+      <h1>Semantic sidenotes for the web—Demo</h1>
+      <p>The <span class="sidenote">
+        <input
+          aria-label="Show sidenote"
+          type="checkbox"
+          id="sidenote__checkbox--1"
+          class="sidenote__checkbox">
+        <label
+          tabindex="0"
+          title="{{ include.content }}"
+          aria-describedby="sidenote-1"
+          for="sidenote__checkbox--1"
+          class="sidenote__button sidenote__button--number-1
+        ">sidenote</label>
+        <small
+          id="sidenote-1"
+          class="sidenote__content sidenote__content--number-1">
+          <span class="sidenote__content-parenthesis
+          "> (sidenote: </span>
+          This is the sidenote.
+          <span class="sidenote__content-parenthesis">)</span>
+        </small>
+      </span> collapses inside the text on viewports narrower than 1080 pixels. There the underlined text is clickable and toggles the visibility of the sidenote's content.</p>
+  		<p>Lorem ipsum dolor sit amet,
+        <span class="sidenote">
+          <input
+            aria-label="Show sidenote"
+            type="checkbox"
+            id="sidenote__checkbox--2"
+            class="sidenote__checkbox">
+          <label
+            tabindex="0"
+            title="{{ include.content }}"
+            aria-describedby="sidenote-2"
+            for="sidenote__checkbox--2"
+            class="sidenote__button sidenote__button--number-2
+          ">consectetur</label>
+          <small
+            id="sidenote-2"
+            class="sidenote__content sidenote__content--number-2">
+            <span class="sidenote__content-parenthesis
+            "> (sidenote: </span>
+            Here's another sidenote.
+            <span class="sidenote__content-parenthesis">)</span>
+          </small>
+        </span> adipiscing elit. Morbi orci purus, venenatis a lorem non, rutrum condimentum nibh. Nam tempor, est a laoreet accumsan, nunc elit elementum nunc, sed congue ex massa ut velit. Aenean porta tincidunt blandit. Aliquam pulvinar diam lobortis ligula tempus, in luctus neque ornare. Ut id sem eu erat accumsan vehicula id sit amet mauris. Duis at mauris faucibus, efficitur massa non, lobortis ligula. Donec lacinia pharetra purus vitae aliquet. Morbi ultricies euismod sem sed mattis. Cras vulputate massa vitae turpis interdum sagittis. Morbi at nunc porttitor, fermentum ipsum quis, vulputate dolor. Aliquam pharetra lobortis ligula, quis dapibus ex gravida et. Donec ornare quam sed velit fringilla tempus. Cras varius dapibus arcu id facilisis. Suspendisse leo odio, eleifend non augue posuere, bibendum commodo orci. Curabitur eget dui sodales, efficitur augue eget, interdum est. Nullam consequat risus sit amet lorem eleifend, vitae vestibulum ipsum condimentum.</p>
+      <p>Mauris vehicula, orci tincidunt luctus feugiat, augue ex finibus libero, id convallis leo turpis at sapien. Nunc sit amet convallis lacus. Integer vitae tortor lorem. Duis scelerisque pretium lacus in elementum. Mauris mattis metus sed tincidunt laoreet. Ut a orci augue. Praesent eu lectus sit amet mi dictum ornare ac eget lacus. Cras vulputate mi non ullamcorper bibendum. Proin sed tincidunt diam, sit amet vehicula dolor. Nulla consectetur sed sapien eget eleifend. Vivamus sollicitudin mauris non mattis blandit. Etiam sollicitudin <span class="sidenote">
+        <input
+          aria-label="Show sidenote"
+          type="checkbox"
+          id="sidenote__checkbox--3"
+          class="sidenote__checkbox">
+        <label
+          tabindex="0"
+          title="{{ include.content }}"
+          aria-describedby="sidenote-3"
+          for="sidenote__checkbox--3"
+          class="sidenote__button sidenote__button--number-3
+        ">orci</label>
+        <small
+          id="sidenote-3"
+          class="sidenote__content sidenote__content--number-3">
+          <span class="sidenote__content-parenthesis
+          "> (sidenote: </span>
+          And another one.
+          <span class="sidenote__content-parenthesis">)
+        </small>
+      </span> vel feugiat commodo. Etiam ut eros eget nibh egestas lobortis in vitae tellus. Nullam est enim, bibendum ut interdum eu, interdum eu tellus.</p>
+  		<p>Cras <span class="sidenote">
+        <input
+          aria-label="Show sidenote"
+          type="checkbox"
+          id="sidenote__checkbox--4"
+          class="sidenote__checkbox">
+        <label
+          tabindex="0"
+          title="{{ include.content }}"
+          aria-describedby="sidenote-4"
+          for="sidenote__checkbox--4"
+          class="sidenote__button sidenote__button--number-4
+        ">sollicitudin</label>
+        <small
+          id="sidenote-4"
+          class="sidenote__content sidenote__content--number-4">
+          <span class="sidenote__content-parenthesis
+          "> (sidenote: </span>
+          And yet another one.
+          <span class="sidenote__content-parenthesis">)
+        </small> sit amet ex ut accumsan. Ut id vehicula turpis. In sem turpis, vulputate eget laoreet et, cursus eu est. Donec tincidunt ornare lorem et pharetra. Sed tempor fermentum lacus rutrum ultrices. Proin at enim aliquam, tempus magna vel, cursus justo. Pellentesque iaculis vestibulum mi gravida facilisis. In hac habitasse platea dictumst. Vivamus faucibus sagittis dolor, at feugiat tortor accumsan ut. Vivamus fringilla sollicitudin tempus. Vestibulum cursus, ex eu egestas pharetra, eros nibh fringilla turpis, consectetur <span class="sidenote">
+          <input
+            aria-label="Show sidenote"
+            type="checkbox"
+            id="sidenote__checkbox--5"
+            class="sidenote__checkbox">
+          <label
+            tabindex="0"
+            title="{{ include.content }}"
+            aria-describedby="sidenote-5"
+            for="sidenote__checkbox--5"
+            class="sidenote__button sidenote__button--number-5
+          ">fermentum</label>
+          <small
+            id="sidenote-5"
+            class="sidenote__content sidenote__content--number-5">
+            <span class="sidenote__content-parenthesis
+            "> (sidenote: </span>
+            Make sure to keep enough space between them, so they don't overlap.
+            <span class="sidenote__content-parenthesis">)
+          </small> erat turpis id tellus.</p>
+  		<p>Donec ligula nisi, fermentum nec eros vitae, fermentum pharetra ipsum. Phasellus dui eros, lobortis vel hendrerit imperdiet, tempor ut justo. Phasellus vehicula odio nunc, a tempus urna venenatis sed. Vestibulum <span class="sidenote">
+        <input
+          aria-label="Show sidenote"
+          type="checkbox"
+          id="sidenote__checkbox--6"
+          class="sidenote__checkbox">
+        <label
+          tabindex="0"
+          title="{{ include.content }}"
+          aria-describedby="sidenote-6"
+          for="sidenote__checkbox--6"
+          class="sidenote__button sidenote__button--number-6
+        ">nec enim non ligula</label>
+        <small
+          id="sidenote-6"
+          class="sidenote__content sidenote__content--number-6">
+          <span class="sidenote__content-parenthesis
+          "> (sidenote: </span>
+          Here's number six.
+          <span class="sidenote__content-parenthesis">)
+        </small> rutrum rutrum eget ac odio. Aenean non metus et orci accumsan ullamcorper. In nec leo at ante rutrum facilisis ut at erat. Donec quis libero eget lorem placerat pellentesque et ac quam. Sed non cursus eros. Pellentesque sit amet pharetra erat. Maecenas volutpat aliquet quam, non cursus turpis efficitur in. Aenean ut euismod ipsum.</p>
+    </article>
+  </main>
+  </body>
+</html>
