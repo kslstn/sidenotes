@@ -1,82 +1,110 @@
-.sidenote{
+.sidenote {
   display: inline;
 }
-.sidenote__button::after{
-  content: "\002a"; /* * */
+
+/* * */
+.sidenote__button::after {
+  content: "\002a";
   display: inline-block;
 }
-.sidenote__button--number-2::after{
-  content: "\2051"; /* ⁑ */
+
+/* ⁑ */
+.sidenote__button--number-2::after {
+  content: "\2051";
 }
-.sidenote__button--number-3::after{
-  content: "\2042"; /* ⁂ */
+
+/* ⁂ */
+.sidenote__button--number-3::after {
+  content: "\2042";
 }
-.sidenote__button--number-4::after{
-  content: "\2020"; /* ✝ */
+
+/* ✝ */
+.sidenote__button--number-4::after {
+  content: "\2020";
 }
-.sidenote__button--number-5::after{
-  content: "\2021"; /* ‡ */  /* ‡ */
+
+/* ‡ */
+.sidenote__button--number-5::after {
+  content: "\2021";
 }
-.sidenote__button--number-6::after{
-  content: "\2051\2051"; /* ⁑⁑ */
+
+/* ⁑⁑ */
+.sidenote__button--number-6::after {
+  content: "\2051\2051";
 }
-.sidenote__button--number-7::after{
-  content: "\2021\2021"; /* ‡‡ */ /* ‡‡ */  /* ‡ */
+
+/* ‡‡ */
+.sidenote__button--number-7::after {
+  content: "\2021\2021";
 }
-.sidenote__checkbox{
+
+.sidenote__checkbox {
   display: none;
 }
-.sidenote__content-parenthesis{
-  /* Hidden, but accessible to browsers that don't do CSS (e.g. screenreaders, Pocket) */
+
+/* Hidden, but accessible to browsers that don't do CSS (e.g. screenreaders, Pocket) */
+.sidenote__content-parenthesis {
   position: absolute;
   left: -99999px;
   top: auto;
 }
 
 /* For narrow viewports, the sidenote is hidden by default and shown when the checkbox is checked. */
-@media screen and (max-width: 1079px){
+@media screen and (max-width: 1079px) {
 
-  .sidenote__checkbox ~ .sidenote__content{
+  .sidenote__checkbox~.sidenote__content {
     /* Hidden, but accessible to browsers that don't do CSS (e.g. screenreaders, Pocket) */
     position: absolute;
     left: -99999px;
     top: auto;
   }
-  .sidenote__checkbox:checked ~ .sidenote__content{
-    position: relative; /* override hidden-but-accessible */
-    left: auto; /* override hidden-but-accessible */
+
+  .sidenote__checkbox:checked~.sidenote__content {
+    /* override hidden-but-accessible */
+    position: relative;
+    left: auto;
+
+    /* make content appear after parent paragraph */
+    float: left;
 
     display: block;
     margin: 0.8rem 0;
     padding: 0.8rem 1.6rem;
   }
 
-  .sidenote__button{
+  .sidenote__button {
     color: var(--link-color);
     text-decoration: underline;
     text-decoration-style: dotted;
     cursor: pointer;
   }
-  .sidenote__button:not(:hover):focus::after{
-    display: inline; /* display:inline-block causes misalignment between focus ring and background. */
+
+  .sidenote__button:not(:hover):focus::after {
+    display: inline;
+    /* display:inline-block causes misalignment between focus ring and background. */
   }
-  .sidenote__checkbox:checked ~ .sidenote__button::after{
+
+  .sidenote__checkbox:checked~.sidenote__button::after {
     content: none;
   }
 }
 
-@media screen and (min-width: 1080px){
-  .sidenote{
+@media screen and (min-width: 1080px) {
+  .sidenote {
     --sidenote-width: 12rem;
     --sidenote-margin: 4.8rem;
     cursor: default;
   }
+
   .sidenote:hover .sidenote__button::after,
-  .sidenote:hover .sidenote__content::before{
+  .sidenote:hover .sidenote__content::before {
     color: var(--link-color);
   }
-  .sidenote__content::before{
-    content: "\002a"; /* * */
+
+  .sidenote__content::before {
+    /* * */
+    content: "\002a";
+
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
@@ -84,34 +112,52 @@
     top: 0;
     bottom: 0;
     left: -4rem;
-    width: 3rem; /* to align different types of asterisks */
+
+    /* to align different types of asterisks we need a fixed width */
+    width: 3rem;
   }
-  .sidenote__content{
+
+  .sidenote__content {
     display: block;
     position: absolute;
     right: 0;
-    margin-top: calc(-1.5*var(--text-size)); /* Align sidenote top with main text */
+
+    /* Align sidenote top with main text */
+    margin-top: calc(-1.5*var(--text-size));
+
     margin-right: calc(-1*var(--sidenote-width) - 1*var(--sidenote-margin));
     width: var(--sidenote-width);
     font-size: var(--text-size);
     color: var(--text-color);
   }
-  .sidenote__content--number-2::before{
-    content: "\2051"; /* ⁑ */
+
+  /* ⁑ */
+  .sidenote__content--number-2::before {
+    content: "\2051";
   }
-  .sidenote__content--number-3::before{
-    content: "\2042"; /* ⁂ */
+
+  /* ⁂ */
+  .sidenote__content--number-3::before {
+    content: "\2042";
   }
-  .sidenote__content--number-4::before{
-    content: "\2020"; /* ✝ */
+
+  /* ✝ */
+  .sidenote__content--number-4::before {
+    content: "\2020";
   }
-  .sidenote__content--number-5::before{
-    content: "\2021";  /* ‡ */
+
+  /* ‡ */
+  .sidenote__content--number-5::before {
+    content: "\2021";
   }
-  .sidenote__content--number-6::before{
-    content: "\2051\2051"; /* ⁑⁑ */
+
+  /* ⁑⁑ */
+  .sidenote__content--number-6::before {
+    content: "\2051\2051";
   }
-  .sidenote__content--number-7::before{
-    content: "\2021\2021"; /* ‡‡ */
+
+  /* ‡‡ */
+  .sidenote__content--number-7::before {
+    content: "\2021\2021";
   }
 }
